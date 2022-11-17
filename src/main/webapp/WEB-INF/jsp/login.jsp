@@ -1,3 +1,6 @@
+
+<!--<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +36,9 @@
 					<small>I don't have an account</small>
 				</a>
 
-				<input type="submit" value="Login!" />
+				<div class='<% out.print("login-error " + request.getAttribute("loginError")); %>'></div>
+
+				<input type="submit" value="Login" />
 			</form>
 		</div>
 	</main>

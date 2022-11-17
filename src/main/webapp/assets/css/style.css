@@ -124,3 +124,31 @@ th, td {
 .point.miss {
 	background-color: red;
 }
+
+.login-error::after, .register-error::after {
+	color: red;
+}
+
+.login-error.username::after {
+	content: "User not found";
+}
+
+.login-error.password::after {
+	content: "Password incorrect";
+}
+
+.login-error.unknown::after, .register-error.unknown::after {
+	content: "Unknown server error";
+}
+
+.register-error.username::after {
+	content: "Bad username";
+}
+
+.register-error.password::after {
+	content: "Bad password";
+}
+
+.register-error.again::after {
+	content: "Passwords must match";
+}

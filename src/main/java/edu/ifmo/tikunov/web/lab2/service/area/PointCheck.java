@@ -1,4 +1,4 @@
-package edu.ifmo.tikunov.web.lab2.service;
+package edu.ifmo.tikunov.web.lab2.service.area;
 
 public class PointCheck {
 	public final double x;

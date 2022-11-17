@@ -1,3 +1,6 @@
+
+<!--<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +22,7 @@
 	<main>
 		<div>
 			<h1>Register</h1>
-			<form method="get">
+			<form method="post">
 				<div class="input-group">
 					<label for="username">Username:</label>
 					<input type="text" name="username" id="username" required />
@@ -30,12 +33,14 @@
 				</div>
 				<div class="input-group" id="again-group">
 					<label for="again">Password again:</label>
-					<input type="password" id="again" required />
+					<input type="password" name="again" id="again" required />
 				</div>
 
 				<a href="login">
 					<small>I have an account</small>
 				</a>
+
+				<div class='<% out.print("register-error " + request.getAttribute("registerError")); %>'></div>
 
 				<input type="submit" value="Register!" />
 			</form>
